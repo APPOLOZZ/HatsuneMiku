@@ -1,29 +1,36 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <title>a freak to-do list</title>
+    <title>My To-Do List</title>
   </head>
   <body>
-<div class="container">
-    <div class="todo-app">
+    <div class="container">
+      <div class="todo-app">
         <h2>My To-Do List</h2>
-        <div class="row">
-            <input type="text" id="task-input" placeholder="Add a new task..." />
-            <button>Add</button>
-            <div> 
-            <ul id="list-container">
-                <li>Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>
-            </ul>
-            </div>
+        
+        <!-- Formulário para adicionar tarefa -->
+        <form id="formulario-tarefa" class="row">
+          <input 
+            type="text" 
+            id="input-tarefa" 
+            placeholder="Add a new task..." 
+            autocomplete="off"
+          />
+          <button type="submit">Add</button>
+        </form>
 
+        <!-- Mensagem de erro (validação) -->
+        <div id="mensagem-erro" class="mensagem-erro"></div>
 
-        </div>
+        <!-- Lista de tarefas -->
+        <ul id="lista-tarefas" class="lista-tarefas">
+        </ul>
+      </div>
     </div>
-</div>
+
     <script src="js/script.js"></script>
   </body>
 </html>
